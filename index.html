@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>જૈન પાઠશાળા પિકનિક જાહેરાત</title>
+    <style>
+        body {
+            font-family: 'Noto Sans Gujarati', Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .header {
+            text-align: center;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .greeting {
+            font-size: 1.3em;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 25px;
+            padding: 15px;
+            background: linear-gradient(45deg, #74b9ff, #0984e3);
+            border-radius: 15px;
+            color: white;
+            box-shadow: 0 8px 16px rgba(116, 185, 255, 0.3);
+        }
+        
+        .event-details {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .event-details h2 {
+            margin-top: 0;
+            font-size: 1.8em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .info-item {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .info-item strong {
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            color: #ffeaa7;
+        }
+        
+        .activities {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 10px 20px rgba(168, 237, 234, 0.3);
+        }
+        
+        .activities h3 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 1.6em;
+            margin-bottom: 20px;
+        }
+        
+        .activity-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+        
+        .activity-item {
+            background: rgba(255,255,255,0.7);
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+            color: #2c3e50;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .activity-item:hover {
+            transform: translateY(-2px);
+        }
+        
+        .important-notes {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 10px 20px rgba(255, 236, 210, 0.4);
+        }
+        
+        .important-notes h3 {
+            color: #d63031;
+            font-size: 1.6em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .note-item {
+            background: rgba(255,255,255,0.8);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border-left: 5px solid #d63031;
+            color: #2c3e50;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .contact {
+            text-align: center;
+            background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 30px;
+            font-size: 1.2em;
+            box-shadow: 0 10px 20px rgba(108, 92, 231, 0.3);
+        }
+        
+        .emoji {
+            font-size: 1.5em;
+            margin: 0 5px;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        .bounce {
+            animation: bounce 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 જૈન પાઠશાળા પિકનિક 📚</h1>
+        </div>
+        
+        <div class="greeting">
+            <span class="emoji bounce">🌹</span> જય જિનેન્દ્ર <span class="emoji bounce">🌹</span>
+            <br><br>
+            દરેક વાલીમિત્રો અને દરેક જૈન શાળાના દીકરા-દીકરીને ખાસ જણાવવાનું કે
+        </div>
+        
+        <div class="event-details">
+            <h2>🎉 વન ડે પિકનિક 2025 🎉</h2>
+            <p style="text-align: center; font-size: 1.1em; margin-bottom: 25px;">
+                દર વર્ષની જેમ આ વર્ષે પણ ઘાટલોડિયા સંઘમાં ચાલતી વિરતી જૈન પાઠશાળાના સહયોગથી
+            </p>
+            
+            <div class="info-grid">
+                <div class="info-item">
+                    <strong>📅 તારીખ:</strong>
+                    01-06-2025 (રવિવાર)
+                </div>
+                <div class="info-item">
+                    <strong>🕕 સમય:</strong>
+                    સવારે 6:30 વાગે
+                </div>
+                <div class="info-item">
+                    <strong>📍 સ્થળ:</strong>
+                    શાંતિ-સુમન રિસોર્ટ (સાણંદ)
+                </div>
+            </div>
+        </div>
+        
+        <div class="activities">
+            <h3>🎯 મનોરંજન પ્રવૃત્તિઓ</h3>
+            <div class="activity-list">
+                <div class="activity-item">🎬 મુવી થિયેટર</div>
+                <div class="activity-item">🎮 ગેમ્સ</div>
+                <div class="activity-item">🏊‍♂️ સ્વિમિંગ પુલ</div>
+                <div class="activity-item">💃 ડિસ્કો થેક</div>
+                <div class="activity-item">🏓 ઇન્ડોર ગેમ્સ</div>
+                <div class="activity-item">⚽ આઉટડોર ગેમ્સ</div>
+                <div class="activity-item">🎩 મેજીક શો</div>
+                <div class="activity-item">🎪 અન્ય પ્રવૃત્તિઓ</div>
+            </div>
+        </div>
+        
+        <div class="important-notes">
+            <h3>⚠️ મહત્વપૂર્ણ સૂચનાઓ</h3>
+            
+            <div class="note-item">
+                <strong>🍽️ ભોજન વ્યવસ્થા:</strong>
+                સવારનો નાસ્તો, બપોરનું જમવાનું અને સાંજનો જમવા જેવો નાસ્તો આપવામાં આવશે
+            </div>
+            
+            <div class="note-item">
+                <strong>👕 કપડાં:</strong>
+                દરેક બાળકે એક જોડી કપડાં જ લાવાના રહેશે
+            </div>
+            
+            <div class="note-item">
+                <strong>🏊‍♂️ સ્વિમિંગ:</strong>
+                સ્વિમિંગ કોસ્ચ્યુમ જરૂરી લાવાનો રહેશે. એના વગર સ્વિમિંગમાં જવા નહીં મળે
+            </div>
+            
+            <div class="note-item">
+                <strong>🚫 પ્રતિબંધ:</strong>
+                બીજી કોઈ પણ વસ્તુ કે નાસ્તો, કે અન્ય કોઈ પણ ગેમ્સ સાથે લેવાની રહેશે નહીં
+            </div>
+            
+            <div class="note-item">
+                <strong>💎 કિંમતી વસ્તુઓ:</strong>
+                બાળકોએ કોઈ પણ પ્રકારની સોના-ચાંદી કે કિંમતી વસ્તુ જોડે લેવાની રહેશે નહીં
+            </div>
+            
+            <div class="note-item">
+                <strong>👨‍👩‍👧‍👦 વાલીમિત્રો:</strong>
+                આ પિકનિકમાં બાળકો સાથે કોઈ પણ વાલીમિત્રોને આવવું હોય તો તેઓએ તેમની રીતે આવાનું રહેશે અને તેમની ટિકિટ તેમને જાતે ટિકિટ બારી પરથી લેવાની રહેશે
+            </div>
+        </div>
+        
+        <div class="contact">
+            📞 સંપર્ક: <a href="tel:9726912218">9726912218</a>
+            <br><br>
+            🙏જય જિનેન્દ્ર🙏
+        </div>
+    </div>
+</body>
+</html>
